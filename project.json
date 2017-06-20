@@ -1,0 +1,35 @@
+{
+  "name": "dockerpoc-project",
+  "source": {
+    "type": "git",
+    "url": "git@github.com:betordz/dockerpoc.git"
+  },
+  "artifacts": {
+    "type": "NO_ARTIFACTS"
+  },
+  "environment": {
+    "type": "LINUX_CONTAINER",
+    "image": "aws/codebuild/docker:1.12.1",
+    "computeType": "BUILD_GENERAL1_SMALL",
+    "environmentVariables": [
+      {
+        "name": "AWS_DEFAULT_REGION",
+        "value": "us-east-1"
+      },
+      {
+        "name": "AWS_ACCOUNT_ID",
+        "value": "9219-4276-4047"
+      },
+      {
+        "name": "IMAGE_REPO_NAME",
+        "value": "921942764047.dkr.ecr.us-east-1.amazonaws.com/dockerpoc"
+      },
+      {
+        "name": "IMAGE_TAG",
+        "value": "latest"
+      }
+    ]
+  },
+  "serviceRole": "arn:aws:iam::account-ID:role/role-name",
+  "encryptionKey": "arn:aws:kms:region-ID:account-ID:key/key-ID"
+}
