@@ -30,6 +30,5 @@
       }
     ]
   },
-  "serviceRole": "arn:aws:iam::account-ID:role/role-name",
-  "encryptionKey": "arn:aws:kms:region-ID:account-ID:key/key-ID"
+  "serviceRole": "arn:aws:iam::921942764047:role/CodeDeployInstanceRole"
 }
