@@ -1,3 +1,3 @@
 echo "Login to ECR"
-$(aws ecr get-login)
+eval $(aws ecr get-login)
 docker pull 921942764047.dkr.ecr.us-east-1.amazonaws.com/dockerpoc:latest
