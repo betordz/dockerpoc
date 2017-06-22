@@ -3,7 +3,8 @@ os: linux
 files:
   - source: source/index.html
     destination: /var/www/html
-AfterInstall:
-  - location: Scripts/pullimage.sh
-    timeout: 180
-    runas: root
+hooks:
+  AfterInstall:
+    - location: Scripts/pullimage.sh
+      timeout: 3600
+      runas: root
