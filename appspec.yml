@@ -3,3 +3,7 @@ os: linux
 files:
   - source: source/index.html
     destination: /var/www/html
+AfterInstall:
+  - location: Scripts/RunResourceTests.sh
+    timeout: 180
+    runas: root
