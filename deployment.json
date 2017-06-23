@@ -1,0 +1,24 @@
+{
+    "applicationName": "MyPOC",
+    "deploymentGroupName": "OnPremiseInstances",
+    "revision": {
+        "revisionType": "GitHub",
+        "gitHubLocation": {
+            "repository": "betordz/dockerpoc",
+            "commitId": "82ab1290009fe9210720d57797707df208531e82"
+        }
+    },
+    "deploymentConfigName": "CodeDeployDefault.AllAtOnce",
+    "description": "My POC build",
+    "ignoreApplicationStopFailures": true,
+    "targetInstances": {
+        "tagFilters": [
+            {
+                "Key": "Name",
+                "Value": "CodeDeploy-OnPremise",
+                "Type": "KEY_AND_VALUE"
+            }
+        ]
+    },
+    "updateOutdatedInstancesOnly": false
+}
